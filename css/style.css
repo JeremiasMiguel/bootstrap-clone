@@ -15,10 +15,6 @@ body {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-main {
-  background: linear-gradient(to right bottom, #f7f5fb 50%, #fff 50%);
-}
-
 li {
   list-style: none;
 }
@@ -31,10 +27,6 @@ img {
   max-width: 100%;
   display: block;
   border-radius: 5px;
-}
-
-.imagem {
-  max-width: 30%;
 }
 
 /* Estrutura geral do grid */
@@ -76,10 +68,7 @@ img {
 .logo-twitter,
 .logo-slack {
   max-width: 24px;
-}
-
-.logo-twitter {
-  background: blue;
+  fill: #fff;
 }
 
 .menu-direito {
@@ -102,13 +91,288 @@ img {
   transition: 0.2s;
 }
 
+.ativo {
+  font-weight: bold;
+}
+
+a.botao-menu {
+  color: #ffe484;
+  border: 1px solid #ffe484;
+  padding: 8px 15px;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+a.botao-menu:hover {
+  background: #ffe484;
+  color: #212529;
+}
+
 /* Conteúdo */
 .conteudo {
   grid-area: conteudo;
-  grid-template-columns: 1fr 1fr;
   gap: 30px;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
+}
+
+.introducao {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 70px 0;
+}
+
+.introducao h1 {
+  font-size: 4em;
+  line-height: 1;
+  font-weight: 500;
+  color: #212529;
+}
+
+.introducao p {
+  font-size: 1.5em;
+  color: #495057;
+  margin-top: 15px;
+  max-width: 650px;
+}
+
+.introducao a.started {
+  display: inline-block;
+  background: #7952b3;
+  color: #fff;
+  font-size: 1.25em;
+  margin-top: 15px;
+  margin-right: 10px;
+  padding: 12px 30px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.introducao a.started:hover {
+  background: #614092;
+}
+
+.introducao a.download {
+  display: inline-block;
+  background: none;
+  color: #6c757d;
+  font-size: 1.25em;
+  border: 1px solid #6c757d;
+  margin-top: 15px;
+  padding: 12px 30px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.introducao a.download:hover {
+  background: #6c757d;
+  color: #fff;
+}
+
+.introducao span {
+  display: block;
+  margin-top: 15px;
+  color: #6c757d;
+}
+
+.introducao .imagem-triple {
+  max-width: 100%;
+}
+
+/* Instalação */
+
+.instalacao {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.instalacao h1 {
+  font-size: 2.5em;
+  color: #212529;
+  font-weight: normal;
+}
+
+.instalacao p {
+  font-size: 1.25em;
+  color: #212529;
+  margin-top: 5px;
+  max-width: 460px;
+}
+
+.instalacao span {
+  display: block;
+  color: #212529;
+  max-width: 460px;
+  margin-top: 10px;
+}
+
+.instalacao a {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #1b89ff;
+  border: 1px solid #1b89ff;
+  border-radius: 5px;
+  margin: 12px 0;
+  font-size: 1.25em;
+  transition: 0.2s;
+}
+
+.instalacao a:hover {
+  background: #1b89ff;
+  color: #fff;
+}
+
+.linha-comando {
+  background: #e3e1da;
+  padding: 20px;
+}
+
+.linha-comando p,
+.linha-comando span {
+  font-size: 0.875em;
+}
+
+.linha-comando p:last-child {
+  margin-top: 20px;
+}
+
+/* CDN */
+
+.bootstrap-cdn {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 70px 0;
+}
+
+.bootstrap-cdn h1 {
+  font-size: 2.5em;
+  color: #212529;
+  font-weight: normal;
+}
+
+.bootstrap-cdn p {
+  font-size: 1.25em;
+  color: #212529;
+  margin-top: 5px;
+  max-width: 460px;
+}
+
+.bootstrap-cdn span {
+  display: block;
+  color: #212529;
+  max-width: 460px;
+  margin-top: 10px;
+}
+
+.bootstrap-cdn a {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #1b89ff;
+  border: 1px solid #1b89ff;
+  border-radius: 5px;
+  margin: 12px 0;
+  font-size: 1.25em;
+  transition: 0.2s;
+}
+
+.bootstrap-cdn a:hover {
+  background: #1b89ff;
+  color: #fff;
+}
+
+/* Icons */
+
+.bootstrap-icons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 70px 0;
+  align-items: center;
+}
+
+.bootstrap-icons h1 {
+  font-size: 2.5em;
+  color: #212529;
+  font-weight: normal;
+}
+
+.bootstrap-icons p {
+  font-size: 1.25em;
+  color: #212529;
+  margin-top: 5px;
+  max-width: 460px;
+}
+
+.bootstrap-icons span {
+  display: block;
+  color: #212529;
+  max-width: 460px;
+  margin-top: 10px;
+}
+
+.bootstrap-icons a {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #1b89ff;
+  border: 1px solid #1b89ff;
+  border-radius: 5px;
+  margin: 12px 0;
+  font-size: 1.25em;
+  transition: 0.2s;
+}
+
+.bootstrap-icons a:hover {
+  background: #1b89ff;
+  color: #fff;
+}
+
+.imagem-icons {
+  width: 100%;
+}
+
+/* Official themes */
+
+.bootstrap-themes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 70px 0;
+  align-items: center;
+}
+
+.bootstrap-themes h1 {
+  font-size: 2.5em;
+  color: #212529;
+  font-weight: normal;
+}
+
+.bootstrap-themes p {
+  font-size: 1.25em;
+  color: #212529;
+  margin-top: 5px;
+  max-width: 460px;
+}
+
+.bootstrap-themes span {
+  display: block;
+  color: #212529;
+  max-width: 460px;
+  margin-top: 10px;
+}
+
+.bootstrap-themes a {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #1b89ff;
+  border: 1px solid #1b89ff;
+  border-radius: 5px;
+  margin: 12px 0;
+  font-size: 1.25em;
+  transition: 0.2s;
+}
+
+.bootstrap-themes a:hover {
+  background: #1b89ff;
+  color: #fff;
 }
 
 .rodape {
